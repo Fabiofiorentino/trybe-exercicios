@@ -1,4 +1,4 @@
-- Github
+trybe-skills-updates
 
 O que eu vou aprender na Trybe
 
@@ -9,3 +9,4 @@ O que eu vou aprender na Trybe
 - HTML
 - CSS
 - JavaScript
+- JavaScript ES6
