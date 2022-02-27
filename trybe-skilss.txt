@@ -1,8 +1,11 @@
-O que vou aprender na Trybe
+- Github
+
+O que eu vou aprender na Trybe
 
 - Unix
 - Bash
 - Git
+- Github
 - HTML
 - CSS
 - JavaScript
