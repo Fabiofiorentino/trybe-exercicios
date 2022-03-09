@@ -46,3 +46,19 @@ if(n > 0) {
 } else {
             console.log("Zero")
 }
+
+//Ex 5
+const angulo1 = -100;
+const angulo2 = 30;
+const angulo3 = 50;
+
+let somaAngulos = angulo1 + angulo2 + angulo3;
+
+if (somaAngulos < 0) {
+    console.log("Numeros invalidos");
+}else if (somaAngulos === 180){
+    console.log(true);
+}else {
+    console.log(false);
+}
+
