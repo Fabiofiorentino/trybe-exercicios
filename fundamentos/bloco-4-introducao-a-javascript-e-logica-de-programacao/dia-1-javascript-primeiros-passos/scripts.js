@@ -62,3 +62,28 @@ if (somaAngulos < 0) {
     console.log(false);
 }
 
+//Exe 6
+const pecaXadrez = "RaInha";
+
+switch(pecaXadrez.toLowerCase()) {
+    case "peão":
+        console.log("Peão = para frente apenas uma casa")
+        break;
+    case "torre":
+        console.log("Torre = horizontal ou vertical")
+        break;
+    case "bispo":
+        console.log("Bispo = diagonais")
+        break;
+    case "cavalo":
+        console.log("Cavalo = em L")
+        break;
+    case "rainha":
+        console.log("Rainha = todas as direções")
+        break;
+    case "rei":
+        console.log("todas as direções apenas uma casa")
+        break;
+        default:
+        console.log("Peça invalida");
+}
