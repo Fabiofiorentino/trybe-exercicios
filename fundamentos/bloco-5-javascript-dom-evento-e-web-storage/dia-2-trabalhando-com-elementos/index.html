@@ -68,14 +68,19 @@
       document.body.appendChild(criaMain);
 
       //3 Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
-      const criaSection = document.createElement('section');
-      criaSection.className = 'center-content';
-      criaMain.appendChild(criaSection);
+      const centerSection = document.createElement('section');
+      centerSection.className = 'center-content';
+      criaMain.appendChild(centerSection);
 
       //4 Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
-      let criaParagraphy = document.createElement('p')
+      const criaParagraphy = document.createElement('p')
       criaParagraphy.innerText = "Aprendendo a manipular o DOM com JS";
-      criaSection.appendChild(criaParagraphy);
+      centerSection.appendChild(criaParagraphy);
+
+      //5 Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      const leftSection = document.createElement('section');
+      leftSection.className = 'left-content';
+      criaMain.appendChild(leftSection);
 
     </script>
   </body>
