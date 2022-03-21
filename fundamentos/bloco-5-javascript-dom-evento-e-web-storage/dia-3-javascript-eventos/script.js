@@ -31,7 +31,10 @@ function createNumbersOfTheCalendar() {
     numCalendarList.innerText = numCalendar;
     monthDaysList.appendChild(numCalendarList);
 
-    if ((numCalendar === 24) || (numCalendar === 25) || (numCalendar === 31)) {
+    if (numCalendar === 25){
+
+      numCalendarList.className = 'day friday holiday';
+    } else if ((numCalendar === 24) || (numCalendar === 25) || (numCalendar === 31)) {
 
       numCalendarList.className = 'day holiday';
       
@@ -69,8 +72,8 @@ createHolidaysButton('Feriado')
 //É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
 
 function changeHolidaysColor (){
-  let holidayButton = document.getElementById('btn-holiday');
-  let feriados = document.querySelector('.holiday');
+  let holidayButton = document.querySelector('#btn-holiday');
+  let feriados = document.querySelectorAll('.holiday');
   let backgroundColor = 'rgb(238,238,238)';
   let newColor = 'orange';
 
@@ -106,23 +109,41 @@ createFridayButton('Sexta-feira');
 /*5 Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
 É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias. */
 
-function fridayChangeColor(){
+function fridayChangeColor(fridays){
   let getFridayButton = document.querySelector('#btn-friday');
-  let getFridays = document.querySelector('.friday');
-  let backgroundColor = 'rgb(238,238,238)';
-  let newColor = 'blue';
+  let getFridays = document.querySelectorAll('.friday');
+  let fridayText = 'Sextou!!';
       
   getFridayButton.addEventListener('click', function(){
 
     for(let index = 0; index < getFridays.length; index += 1){
-      if(getFridays[index].style.backgroundColor === newColor){
-        getFridays[index].style.backgroundColor = backgroundColor;
-      } else {
-        getFridays[index].style.backgroundColor = newColor;
+      if(getFridays[index].innerHTML !== fridayText){
+        getFridays[index].innerHTML = fridayText;
+      } else{
+        getFridays[index].innerHTML = fridays[index];
       }
     }
 
   })
 }
 
-fridayChangeColor();
+let dezFridays = [4,11,18,25];
+fridayChangeColor(dezFridays);
+
+//6 Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+
+function zoomDays () {
+  const getDays = document.querySelector('#days');
+  const zoom = '30px';
+
+  getDays.addEventListener('mouseover', function (){
+    if(getDays.style.font.size === '20px'){
+      getDays.style.font.size = zoom;
+    }else {
+      getDays.style.font.size = '20px';
+    }
+  })
+  
+}
+
+zoomDays();
