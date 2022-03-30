@@ -41,7 +41,7 @@
   }
   
     figure {
-      margin: 10%;
+      margin: 10px;
   }
   
   figcaption {
@@ -59,6 +59,25 @@
 
     section{
         flex-direction: row;
+        margin: 10px;
     }
 
+    img {
+        margin: 15px;
+    }
+    figure{
+        margin: 0.5px;
+    }
+
+}
+
+@media screen and (min-width: 1080px){
+    body {
+        background-color:coral;
+        max-width: 1130px;
+        align-items: center;
+    }
+    figcaption{
+        font-size: 30px;
+    }
 }
