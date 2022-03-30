@@ -7,6 +7,11 @@ html {
   }
 
   @media screen and (max-width: 720px) {
+
+    .container{
+        display: flex;
+        justify-content: center;
+    }
       
   }
 
