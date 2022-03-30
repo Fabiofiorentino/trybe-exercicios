@@ -11,9 +11,7 @@
   }
   
   body {
-      display: flex;
-      flex-direction: column;
-      margin: 10%;
+            margin: 10%;
 
   }
   
@@ -27,9 +25,7 @@
   
   }
   
-  h2 {
-  
-  }
+ 
   
   img {
       max-width: 100%;
@@ -40,10 +36,11 @@
   }
   
   section {
-  
+      display: flex;
+      flex-flow: row wrap;
   }
   
-  figure {
+    figure {
       margin: 10%;
   }
   
@@ -52,5 +49,16 @@
   }
 
 @media screen and (min-width: 600px){
-    
+    body {
+        background-color: chocolate;
+        margin: 20px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+
+    section{
+        flex-direction: row;
+    }
+
 }
