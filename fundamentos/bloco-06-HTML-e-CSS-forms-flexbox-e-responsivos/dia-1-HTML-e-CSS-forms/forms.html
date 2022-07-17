@@ -11,13 +11,43 @@
     <h1>TrybeTrip</h1>
 </header>
 <body>
-    <form action="">
-        <label for="">Nome:</label>
-        <input type="text"><br>
-        <label for="">E-mail:</label>
-        <input type="email">
+    <form action="" method="get" enctype="multipart/form-data">
+        <label for="nome" >Nome:</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" minlength="10" maxlength="40"><br><br>
+        <label for="email" >E-mail:</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail" minlength="10" maxlength="40"><br>
+        <p>Destino Preferido:</p>
+        <label for="opcão1">
+            <input type="radio" id="opcão1" name="destino" value="cidade">Cidade
+        </label>
+        <label for="opcão2">
+            <input type="radio" id="opcão2" name="destino" value="praia">Praia
+        </label>
+        <label for="opcão3">
+            <input type="radio" id="opcão3" name="destino" value="campo">Campo
+        </label>
+        <label for="opcão4">
+            <input type="radio" id="opcão4" name="destino" value="montanhas">Montanhas
+        </label>
+        
+        <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+        <textarea name="porque" id="textarea-1" cols="30" rows="10" maxlength="500" placeholder="Digite seu texto aqui"></textarea>
+        <br><br>
+        <label for="data-viagem">Qual a melhor data para realizar sua viagem?<br><br>
+            <input type="date" id="data-viagem">
+        </label>
+        <br><br>
+        <label for="concordo1">
+            <input type="checkbox" id="concordo1" checked>Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe
+        </label><br>
+        <label for="concordo2">
+            <input type="checkbox" id="concordo2" checked>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+        </label>
+        <br><br>
+        <button type="submit" id="enviar">Enviar</button>
+        <button type="reset">Limpar</button>
 
     </form>
-    
+<script src="script.js"></script>    
 </body>
 </html>
